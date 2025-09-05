@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Truffles | Varna, Bulgaria</title>
+    <meta name="description" content="Premium truffles in Varna, Bulgaria. Explore our selection and contact us for orders.">
+    <meta name="keywords" content="Truffles, Varna, Bulgaria">
+    <!-- Language Detection and Redirect -->
+    <script>
+      // Function to detect browser language and redirect accordingly
+      function detectLanguageAndRedirect() {
+        // Get browser language (primary language)
+        const browserLang = navigator.language || navigator.userLanguage;
+        const primaryLang = browserLang.split('-')[0].toLowerCase();
+        
+        // Check if language is Bulgarian
+        if (primaryLang === 'bg' || primaryLang === 'bul') {
+          window.location.replace('bg/index.html');
+        } else {
+          window.location.replace('en/index.html');
+        }
+      }
+      
+      // Execute redirect after theme is applied
+      setTimeout(detectLanguageAndRedirect, 100);
+    </script>
+    
+    <!-- Fallback for users with JavaScript disabled - will redirect to English by default -->
+    <meta http-equiv="refresh" content="1; url=en/index.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="en/index.html">
+    
+    <!-- Hreflang for language switching -->
+    <link rel="alternate" hreflang="en" href="en/index.html">
+    <link rel="alternate" hreflang="bg" href="bg/index.html">
+    <link rel="alternate" hreflang="x-default" href="en/index.html">
+  </head>
+  <body>
+  </body>
+  </html>
+
+
